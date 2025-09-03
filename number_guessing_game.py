@@ -1,6 +1,6 @@
 import random
 
-global high_score
+#Initiate high score
 high_score = 11
 
 def main():
@@ -20,6 +20,7 @@ def main():
             )
         
         while True:
+            # Set difficulty
             difficulty = input("Enter your choice: ")
             
             match difficulty:
@@ -44,9 +45,11 @@ def main():
             "Let's start the game!\n"
             )
         
+        # Generate answer
         answer = random.randint(1, 100)
         guessed_correctly = False
 
+        # Guessing Loop
         for i in range(total_guesses):
             guess = int(input("Enter your guess: "))
 
@@ -66,6 +69,7 @@ def main():
         if guessed_correctly == False:
             print("\nUnfortunately you have failed to guess the number!")
 
+        # Retry or no
         while True:
             play_again = input("\nDo you want to play again? (Y/N): ")
             print()
